@@ -93,3 +93,4 @@ while done == False:
         print("You are ", thirst, " thirst out of 100.")
     else:
         print("You have a wrong input")
+#trademark Alex Castillo
