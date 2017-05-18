@@ -9,6 +9,19 @@ you=20
 terrorists=0
 hunger=100
 thirst=100
+ingredient = print("Pepperoni")
+def mix_and_cook():
+    print("Flatten out dough")
+    print("put tomato sauce on dough")
+    print("put cheese and ingredients on dough")
+    print("put pizza in oven")
+    print("take pizza out of oven in 20 minutes")
+def make_pizza(ingredient):
+    print("How to make an pizza:")
+    mix_and_cook()
+    pizza = 'a {} pizza!'.format(ingredient)
+    return pizza
+
 if done == True:
     print("You have finished the game, ethier you've died, or you made it out of Herozitovia. Restart to play again.")
 while done == False:
