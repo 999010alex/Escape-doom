@@ -16,11 +16,11 @@ while done == False:
         print("You have won the game! You have made it out of the terrorist hideout! Congrats!")
         done=True
         break
-    if natives >= you:
+    if terrorists >= you:
         print("The terrorist have caught up to you, and you are DEAD.")
         done=True
         break
-    if camel == 0:
+    if hunger == 0:
         print("Your stomache grumbles as you pass out from hunger, the terrorists catch up to you, YOU ARE DEAD.")
         done=True
         break
@@ -29,17 +29,17 @@ while done == False:
         done=True
         break
     print("The desert seems endless, what will you do?")
-    print("A. Ride at full speed")
+    print("A. Run at full speed")
     print("B. Drink some water")
-    print("C. Rest")
-    print("D. Ride at a steady speed")
-    print("E. Check your camel and thirst, and use your GPS")
+    print("C. Eat one of your meals")
+    print("D. Jog at a steady speed")
+    print("E. Check in on your hunger and thirst, and use your GPS")
     choice=input('Your choice: ')
     if choice == "A" or choice == "a":
-        print("You ride 25 miles. Your camel lost energy, you're slightly more thirsty.")
+        print("You run 25 miles. Your have gotten hungrier, and you're slightly more thirsty.")
         you=you+25
-        natives=natives+18
-        camel=camel-20
+        terrorists=terrorists+18
+        hunger=hunger-20
         thirst=thirst-20
 
     elif choice == "b" or choice == "B":
@@ -49,11 +49,37 @@ while done == False:
         camel=camel+5
         thirst=thirst+20
     elif choice == "c" or choice == "C":
-        print("You and your camel got some rest, but the natives are getting closer.")
-        you=you+1
-        natives=natives+20
-        camel=camel+25
-        thirst=thirst+5
+        print("Which meal shall you eat?")
+        print("A. Pizza")
+        print("B. Taco")
+        print("C. Sandwich")
+        print("D. Hot Pocket")
+        choice=input('Your choice: ')
+        if choice == "A" or choice == "a":
+            print("You unbox to pizza to find it uncooked, luckily, there happens to be a pizza oven nearby.")
+            
+            you=you+25
+            terrorists=terrorists+18
+            hunger=hunger-20
+            thirst=thirst-20
+
+        elif choice == "b" or choice == "B":
+            print("You drank water, your thirst goes down but the terrorists are getting closer.")
+            you=you+5
+            terrorists=terrorists+23
+            hunger=hunger+5
+            thirst=thirst+20
+        elif choice == "c" or choice == "C":
+            print("Which meal shall you eat?")
+            you=you+1
+            terrorists=terrorists+20
+            hunger=hunger+25
+            thirst=thirst+5
+        elif choice == "d" or choice == "D":
+            you=you+1
+            terrorists=terrorists+20
+            hunger=hunger+25
+            thirst=thirst+5
     elif choice == "d" or choice == "D":
         print("You ride 15 miles, but you get more thirsty, and your camel loses energy.")
         you=you+15
