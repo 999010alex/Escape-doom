@@ -9,7 +9,8 @@ you=20
 terrorists=0
 hunger=100
 thirst=100
-ingredient = print("Chicken")
+ingredient = 'chicken parm'
+
 def mix_and_cook():
     print("Flatten out dough")
     print("put tomato sauce on dough")
@@ -31,6 +32,7 @@ def make_taco(ingredient):
     print("How to make a taco!")
     mix_and_cook2()
     taco = 'a {} taco!'.format(ingredient)
+    return taco
 def mix_and_cook3():
     print("Put mustard or mayo and cheese on bread")
     print("Put meat on bread")
@@ -40,6 +42,7 @@ def make_sandwich(ingredient):
     print("How to make a sandwich!")
     mix_and_cook3()
     sandwich = 'a {} sandwich!'.format(ingredient)
+    return sandwich
 def mix_and_cook4():
     print("take hot pocket out of package")
     print("put hot pocket in conviently nearby microwave")
@@ -48,6 +51,7 @@ def make_hot_pocket(ingredient):
     print("How to make a hot pocket!")
     mix_and_cook4()
     hot_pocket = 'a {} hot pocket!'.format(ingredient)
+    return hot_pocket
 if done == True:
     print("You have finished the game, ethier you've died, or you made it out of Herozitovia. Restart to play again.")
 while done == False:
@@ -82,7 +86,7 @@ while done == False:
         thirst=thirst-20
 
     elif choice == "b" or choice == "B":
-        print("You drank water, your thirst goes down but the natives are getting closer.")
+        print("You drank water, your thirst goes down but the terrorists are getting closer.")
         you=you+5
         terrorists=terrorists+23
         hunger=hunger+5
@@ -100,7 +104,7 @@ while done == False:
             you=you+25
             terrorists=terrorists+18
             hunger=hunger+25
-            thirst=thirst-20
+            thirst=thirst+5
 
         elif choice == "b" or choice == "B":
             print(make_taco(ingredient))
@@ -136,4 +140,6 @@ while done == False:
         print("You are ", thirst, " thirst out of 100.")
     else:
         print("You have a wrong input")
+
+
 #trademark Alex Castillo
