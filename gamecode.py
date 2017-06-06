@@ -50,7 +50,6 @@ def make_hot_pocket(ingredient):
     hot_pocket = 'a {} hot pocket!'.format(ingredient)
 if done == True:
     print("You have finished the game, ethier you've died, or you made it out of Herozitovia. Restart to play again.")
-    break 
 while done == False:
     if you >= 200:
         print("You have won the game! You have made it out of the terrorist hideout! Congrats!")
@@ -97,27 +96,27 @@ while done == False:
         choice=input('Your choice: ')
         if choice == "A" or choice == "a":
             print("You unbox to pizza to find it uncooked, luckily, there happens to be a pizza oven nearby.")
-            print(make_pizza)
+            print(make_pizza(ingredient))
             you=you+25
             terrorists=terrorists+18
             hunger=hunger+25
             thirst=thirst-20
 
         elif choice == "b" or choice == "B":
-            print(make_taco)
+            print(make_taco(ingredient))
             you=you+5
             terrorists=terrorists+23
             hunger=hunger+20
             thirst=thirst+20
         elif choice == "c" or choice == "C":
             print("Which meal shall you eat?")
-            print(make_sandwich)
+            print(make_sandwich(ingredient))
             you=you+1
             terrorists=terrorists+20
             hunger=hunger+15
             thirst=thirst+5
         elif choice == "d" or choice == "D":
-            print(make_hot_pocket)
+            print(make_hot_pocket(ingredient))
             you=you+1
             terrorists=terrorists+20
             hunger=hunger+10
