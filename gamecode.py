@@ -50,6 +50,7 @@ def make_hot_pocket(ingredient):
     hot_pocket = 'a {} hot pocket!'.format(ingredient)
 if done == True:
     print("You have finished the game, ethier you've died, or you made it out of Herozitovia. Restart to play again.")
+    break 
 while done == False:
     if you >= 200:
         print("You have won the game! You have made it out of the terrorist hideout! Congrats!")
