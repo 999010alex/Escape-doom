@@ -1,5 +1,5 @@
 # Escape-doom
-A final project for 12th grade computer science 
+#A final project for 12th grade computer science 
 print("Welcome to Escape doom!")
 print("You are a spy for the CIA and you got caught by Herozitovian terrorists!")
 print("You manage to steal food from their kitchen, consisting of: one pizza, one taco, one sandwich, and one hot pocket. You also have one 2 liter bottle of water.")
@@ -21,7 +21,8 @@ def make_pizza(ingredient):
     mix_and_cook()
     pizza = 'a {} pizza!'.format(ingredient)
     return pizza
-
+def mix_and_cook2():
+    print("
 if done == True:
     print("You have finished the game, ethier you've died, or you made it out of Herozitovia. Restart to play again.")
 while done == False:
